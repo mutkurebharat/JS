@@ -33,10 +33,20 @@
             <td><input type="button" onclick="addNumber()" value="Add"></td>
         </tr>
     </table>
-    <script src="first.js"></script>
+    <script>
+        function addNumber() {
+            var number1 = document.getElementById("firstNumber").value;
+            var number2 = document.getElementById("secondNumber").value;
+
+            document.getElementById("result").value = Number(number1) + Number(number2);
+            
+        }
+    </script>
+    <!-- <script src="first.js"></script> -->
     <!-- <script src="../loops/while.js"></script> -->
     <!-- <script src="../loops/doWhile.js"></script> -->
-    <script src="../loops/for.js"></script>
+    <!-- <script src="../loops/for.js"></script> -->
+    <script src="../function/function.js"></script>
 </body>
 
 </html>

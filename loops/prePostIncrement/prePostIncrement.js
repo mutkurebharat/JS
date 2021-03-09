@@ -5,6 +5,7 @@ var value2 = start++ + ++start - --start + start--;
 
 // 10 + 12 - 11 + 11
 
+4 + 5 * 3 / 2
 
 // 10 + 11
 
