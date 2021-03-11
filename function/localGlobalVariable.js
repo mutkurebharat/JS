@@ -1,10 +1,12 @@
-var globall = "This is global variable";
+var globall = "This is global variable"; // var global = "This is global variable"
 
 function some(){
-    locall = "This is local variable";
-    console.log(`accesing global inside function = ${globall}`);
-    console.log(`accessing local inside function = ${locall}`);
-
+  // function some(){
+  // var local
+  //}
+  locall = "This is local variable";
+  console.log(`accesing global inside function = ${globall}`);
+  console.log(`accessing local inside function = ${locall}`);
 }
 
 
