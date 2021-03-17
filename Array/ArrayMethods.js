@@ -1,5 +1,5 @@
-var arr = ["ajay", "mahesh", "suhas", "vivek"];
-var arr1 = ['A', 'B', 'C', 'D'];
+// var arr = ["ajay", "mahesh", "suhas", "vivek"];
+// var arr1 = ['A', 'B', 'C', 'D'];
 
 // console.log(arr.join(" "));
 
@@ -48,6 +48,22 @@ var arr1 = ['A', 'B', 'C', 'D'];
 
 // Concat
 
-var newArr = arr.concat(arr1);
+// var newArr = arr.concat(arr1);
 
-console.log(newArr)
+// console.log(newArr)
+
+// Sort Method
+
+// var arr = ["J", "C", "F", "Y", "T"];
+// var z = arr.sort();
+// console.log(z.reverse());
+
+var arr = [40, 100, 1, 5, 25, 10];
+console.log(arr.sort(function(a,b) {
+    return b - a;
+}));
+
+
+console.log(Math.max.apply(null, arr)); // TO calculate largest element 
+console.log(Math.min.apply(null, arr)); //TO calculate smaller element 
+
