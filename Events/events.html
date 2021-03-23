@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <input type="button" value="Hover On Me" onmouseover="this.style.backgroundColor='red';this.style.color='white'"
+        onmouseout="this.style.backgroundColor='black'; this.style.color='red'"> -->
+
+    <!-- <input type="button" id="btn" value="Hover On Me" onmouseover="changeColorOnMouseOver()" onmouseout="changeColorOnMouseOut()"> -->
+
+    <!-- <input type="button" value="Click Me" id="btn"> -->
+
+
+    <!-- <input type="button" id="diff" value="Click Me" onclick="useHtmlAttribute()"> -->
+
+    <input type="button" value="Click Me" id="dom">
+    <!-- <script src="events.js"></script> -->
+
+    <script>
+        // document.getElementById("btn").onmouseover = changeColorOnMouseOver;
+        //  document.getElementById("btn").onmouseout = changeColorOnMouseOut;
+
+        //  function changeColorOnMouseOver() {
+        //         console.log("ON MOUSE OVER");
+        //         var buttonEle = document.getElementById("btn");
+        //         buttonEle.style.backgroundColor = "green";
+        //         buttonEle.style.color = "white";
+        //     }
+
+        //     function changeColorOnMouseOut() {
+        //         console.log("ON MOUSE OUT");
+        //         var buttonEle = document.getElementById("btn");
+        //         buttonEle.style.backgroundColor = "black";
+        //         buttonEle.style.color = "orange";
+        //     }
+
+        // document.getElementById("btn").onmouseover = function () {
+        //     console.log("ON MOUSE OVER");
+        //     var buttonEle = document.getElementById("btn");
+        //     buttonEle.style.backgroundColor = "green";
+        //     buttonEle.style.color = "white";
+        // };
+
+
+        // document.getElementById("btn").onmouseout = function () {
+        //     console.log("ON MOUSE OUT");
+        //     var buttonEle = document.getElementById("btn");
+        //     buttonEle.style.backgroundColor = "black";
+        //     buttonEle.style.color = "orange";
+        // };
+
+
+    </script>
+    <script>
+        // document.getElementById("diff").onclick = function() {
+        //     alert("Using DOM Object Property");
+        // }
+
+        // function useHtmlAttribute() {
+        //     alert("Using HTML Attribue");
+        // }
+    </script>
+    <script>
+        
+
+        document.getElementById("dom").onclick = useDomObjectProperty;
+
+        document.getElementById("dom").onclick = function () {
+                alert("Handler 1");
+            }
+
+        function useDomObjectProperty() {
+            alert("Handler 2");
+        }
+    </script>
+</body>
+
+</html>

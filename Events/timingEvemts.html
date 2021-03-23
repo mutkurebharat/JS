@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="timeDiv"></div>
+    <br><br>
+    <input type="button" value="Start Clock" onclick="startClock()">
+    <input type="button" value="Stop Clock" onclick="stopClock()">
+    <script>
+        var intervalId;
+
+        function startClock() {
+            intervalId = setInterval(showDateAndTime, 1000);
+        }
+
+        function stopClock() {
+            clearInterval(intervalId)
+        }
+
+
+        function showDateAndTime() {
+            document.getElementById("timeDiv").innerHTML = new Date()
+        }
+
+        showDateAndTime()
+    </script>
+</body>
+</html>

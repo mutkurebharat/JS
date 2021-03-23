@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" value="10" id="cntTimer">
+    <br><br><br>
+    <input type="button" value="Start Timer" onclick="startTimer('cntTimer')">
+    <input type="button" value="Stop Timer" onclick="stopTimer()">
+
+    <script>
+        var interval;
+
+        function startTimer(controlId) {
+            var control = document.getElementById(controlId);
+            var seconds = control.value;
+            seconds = seconds - 1;
+
+            if(seconds == 0){
+                control.value = "Done";
+                return;
+            } else {
+                control.value = seconds;
+            }
+
+            interval = setTimeout(function() {
+                startTimer("cntTimer")
+            }, 1000);
+
+            setTimeout(nameOfFunction, timeout);
+        }
+
+        function stopTimer() {
+            clearTimeout(interval)
+        }
+    </script>
+</body>
+</html>

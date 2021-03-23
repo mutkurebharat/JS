@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>First Name</td>
+            <td><input type="text" id="txtFirstName" onkeyup="validateRequiredField('txtFirstName')"
+                onkeydown="validateRequiredField('txtFirstName')"></td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td><input type="text" id="txtLastName" onkeyup="validateRequiredField('txtLastName')"
+                onkeydown="validateRequiredField('txtLastName')"></td>
+        </tr>
+    </table>
+    <script>
+        function validateRequiredField(controlId) {
+            var control = document.getElementById(controlId);
+            if(control.value == ""){
+                control.style.backgroundColor = 'red';
+            } else {
+                control.style.backgroundColor = 'green';
+            }
+        }
+    </script>
+</body>
+</html>
