@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .styleClass{
+            display: table-cell;
+            border: 10px solid black;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="styleClass" onclick="alert('DIV Click Handler')">
+        DIV
+        <span class="styleClass" onclick="alert('SPAN Click Handler')">
+            SPAN
+            <input type="button" value="Click Me" onclick="alert('BUTTON Click Handler')">
+        </span>
+    </div> -->
+
+    <!-- <div class="styleClass" onclick="alert('DIV Click Handler')">
+        DIV
+        <span class="styleClass">
+            SPAN
+            <input type="button" value="Click Me">
+        </span>
+    </div> -->
+
+    <div id="DIV1" class="styleClass">
+        DIV1
+        <div id="DIV2" class="styleClass">
+            DIV2
+            <div id="DIV3" class="styleClass">
+                DIV3
+            </div>
+        </div>
+    </div>
+    <script>
+        var divElements = document.getElementsByTagName('div');
+        console.log(divElements)
+        for (var index = 0; index < divElements.length; index++) {
+            divElements[index].onclick = function(event) {
+                event.stopPropagation();
+                this.style.borderColor = "red";
+                alert(this.getAttribute("id") + "  Background Changed")
+            }
+            
+        }
+    </script>
+</body>
+</html>
