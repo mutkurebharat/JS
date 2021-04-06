@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .divStyle {
+            display: table-cell;
+            padding: 20px;
+            border: 10px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="DIV1" class="divStyle">
+        DIV1
+        <div id="DIV2" class="divStyle">
+            DIV2
+            <div id="DIV3" class="divStyle">
+                DIV3
+            </div>
+        </div>
+    </div>
+    <script>
+        var divElements = document.getElementsByTagName("div");
+
+        for (var index = 0; index < divElements.length; index++) {
+            divElements[index].addEventListener("click", clickHandler, true)
+            divElements[index].addEventListener("click", clickHandler, false)
+        }
+
+        function clickHandler() {
+            // event.stopPropagation();
+            alert(this.getAttribute("id") + " Click Event Handler")
+        }
+
+    </script>
+</body>
+
+</html>

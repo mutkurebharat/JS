@@ -44,7 +44,7 @@
         console.log(divElements)
         for (var index = 0; index < divElements.length; index++) {
             divElements[index].onclick = function(event) {
-                event.stopPropagation();
+                // event.stopPropagation();
                 this.style.borderColor = "red";
                 alert(this.getAttribute("id") + "  Background Changed")
             }
