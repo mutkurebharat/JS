@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input 
+    type="button" 
+    value="Single, Double or Right Click" 
+    onclick="getEventName(event)"
+    onmousedown="getEventName(event)" 
+    onmouseup="getEventName(event)"
+    onmouseover="getEventName(event)"
+    onmouseout="getEventName(event)" 
+    ondblclick="getEventName(event)" 
+    oncontextmenu="getEventName(event)">
+
+
+    <input type="button" value="Clear Text" onclick="clearText()">
+    <br><br><br>
+    <textarea id="result" cols="30" rows="20"></textarea>
+
+    <script>
+        function getEventName(event) {
+            event = event || window.event;
+            document.getElementById("result").value += event.type + "\r\n"
+        }
+
+        function clearText() {
+            document.getElementById("result").value = "";
+        }
+
+        //mouseover - Occurs when mouse pointer is moved over an element
+        
+        //mouseout -  Occurs when mouse pointer is moved out of an element
+
+        //mousemove - Occurs when mouse pointer is moving on the element
+
+        // mouseup - Occurs when mouse is released over an element
+
+        // mousedown - Occurs when mouse is pressed over an element
+
+        // click - Occurs when the mouse button is clicked. (mousedown, mouseup and click 
+        // event occurs in a sequence)
+
+        // dblclick - Occurs when the mouse button is double-clicked. (mousedown, mouseup and
+        //  click, dblclick  event occurs in a sequence)
+
+        // contextmenu - Occurs when the mouse right button is clicked(mousedown, mouseup and
+        // contextmenu occurs in a sequence)
+
+    </script>
+</body>
+
+</html>

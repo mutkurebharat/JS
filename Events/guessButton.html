@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="Click Me" onmouseup="getClickCode(event)">
+    <input type="button" value="Clear Text" onclick="clearText()">
+
+    <br><br><br>
+
+    <textarea id="result" cols="5" rows="10"></textarea>
+
+    <script>
+        function getClickCode(event) {
+            if(event.which){
+                document.getElementById("result").value += "Event Which = " + event.which + "\r\n";
+            } else {
+                document.getElementById("result").value += "Event Button = " + event.button + "\r\n";
+            }
+        }
+
+        function clearText() {
+            document.getElementById("result").value = "";
+        }
+
+
+        // function getClickCode(event) {
+        //     var whichButton;
+
+        //     if(event.which){
+        //         switch (event.which) {
+        //             case 1:
+        //                 whichButton = "Left Button Clicked";
+        //                 break;
+                
+        //                 case 2:
+        //                 whichButton = "Middle Button Clicked";
+        //                 break;
+
+        //                 case 3:
+        //                 whichButton = "Right Button Clicked";
+        //                 break;
+        //             default:
+        //                 whichButton = "Invalid Button Clicked";
+        //                 break;
+        //         }
+        //     } else {
+        //         switch (event.button) {
+        //             case 1:
+        //                 whichButton = "Left Button Clicked";
+        //                 break;
+
+        //             case 2:
+        //                 whichButton = "Middle Button Clicked";
+        //                 break;
+
+        //             case 3:
+        //                 whichButton = "Right Button Clicked";
+        //                 break;
+        //             default:
+        //                 whichButton = "Invalid Button Clicked";
+        //                 break;
+        //         }
+        //     }
+        //     alert(whichButton);
+        // }
+
+    </script>
+</body>
+</html>
