@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+        <p id="para" class="pa" height="100" width="100">One</p>
+        <p id="para" class="pa">Two</p>
+        <p id="para1" class="pa">Three</p>
+        <p id="para" class="pa">Four</p>
+        <p id="para" class="pa">Five</p>
+        <img src="Layer-93.png" id="image">
+        <button onclick="changeContent()">Click TO change</button>
+    </div>
+    <script>
+
+        function changeContent(params) {
+            var element = document.getElementById("para"); // Return only single element which is first
+
+            // var element = document.getElementsByTagName("p") // Return array of mathing element
+
+            // var element = document.getElementsByClassName("pa")
+            // element.style.backgroundColor = "red";
+
+            // element.setAttribute(height, 500)
+            // element.setAttribute(width, 500)
+            // console.log(element)
+
+            // document.getElementById("image").src="Layer-94.png"
+
+            
+            // var newPara = document.createElement("p");
+            // var node = document.createTextNode("Six");
+
+            // newPara.appendChild(node);
+
+            // var ele = document.getElementById("parent")
+
+            // var inserBef = document.getElementById("para1");
+            
+            // ele.insertBefore(newPara, inserBef)
+            // document.getElementById("parent").appendChild(newPara)
+
+
+            // Remove Particular Element From DOM
+
+            // var removedEle = document.getElementById("image");
+            // removedEle.remove();
+
+
+            // var parent = document.getElementById("parent");
+
+            // var removedEle = document.getElementById("para1");
+
+            // parent.removeChild(removedEle);
+
+            // var element = document.querySelectorAll("[src='Layer-93.png']");
+
+            var element = document.querySelector("#para");
+
+            console.log(element);
+        }
+        // document.getElementById("para").innerHTML = "This Is Para"
+    </script>
+</body>
+</html>
