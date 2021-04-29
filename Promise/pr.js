@@ -3,16 +3,16 @@ function loadData(url) {
     const request = new XMLHttpRequest();
 
     request.onreadystatechange = (e) => {
-      if (this.readyState === 4) {
-        if (this.status === 200) {
-          resolve(this.response);
+      if (request.readyState === 4) {
+        if (request.status === 200) {
+          resolve(request.response);
         } else {
-          reject(this.status);
+          reject(request.status);
         }
       }
     };
 
-    request.open("GET", url, true);
+    request.open("GET", url);
     request.send();
   });
 }
@@ -21,10 +21,12 @@ const btn = document.querySelector("#btnGet");
 const msg = document.querySelector("#message");
 
 btn.onclick = () => {
-  loadData("http://jsonplaceholder.typicode.com/posts/1").then((response) => {
-    // console.log(response);
-    // alert("sdkj");
-    const result = JSON.parse(response);
-    console.log(result);
-  });
+var data = loadData("http://jsonplaceholder.typicode.com/posts/1");
+data.then(res => {
+    console.log(msg);
+    const result = JSON.parse(res);
+    msg.innerHTML = result.title;
+}, err => {
+    console.log(err);
+})
 };
