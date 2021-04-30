@@ -21,7 +21,6 @@ const btn = document.querySelector("#btnGet");
 const msg = document.querySelector("#message");
 const listDiv = document.querySelector("#list");
 
-
 // btn.onclick = () => {
 // var data = loadData("http://jsonplaceholder.typicode.com/posts/1");
 // data.then(res => {
@@ -34,24 +33,26 @@ const listDiv = document.querySelector("#list");
 // };
 
 btn.onclick = () => {
-  var data = loadData("http://jsonplaceholder.typicode.com/users");
+  var data = loadData("http://jsonplaceholder.typicode.com/photos");
   data.then(
     (res) => {
       console.log(res);
 
       const result = JSON.parse(res);
-      var list = "<ul>";
+      var div = "<div>";
       result.forEach((obj) => {
-        list = `${list} <li> ${obj.name} </li>`;
+          var objjj = JSON.stringify(obj)
+          var img = document.createElement('img');
+          img.src = objjj.thumbnailUrl;
+        div = `${div} ${img}`;
       });
 
-      list = list + "</ul>";
-      listDiv.innerHTML = list;
+      div = div + "</div>";
+      listDiv.innerHTML = div;
+    // listDiv.appendChild(div)
     },
     (err) => {
       console.log(err);
     }
   );
 };
-
-
