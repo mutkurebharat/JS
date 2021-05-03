@@ -36,20 +36,22 @@ btn.onclick = () => {
   var data = loadData("http://jsonplaceholder.typicode.com/photos");
   data.then(
     (res) => {
-      console.log(res);
 
       const result = JSON.parse(res);
-      var div = "<div>";
-      result.forEach((obj) => {
-          var objjj = JSON.stringify(obj)
-          var img = document.createElement('img');
-          img.src = objjj.thumbnailUrl;
-        div = `${div} ${img}`;
+      var objjj = JSON.stringify(result);
+
+      result.forEach(function (obj) {
+        // var ele = document.createElement("span");
+        var img = document.createElement("img");
+        img.setAttribute("src", obj.thumbnailUrl);
+        // ele.appendChild(img);
+        // var elem = document.getElementById('list').appendChild(ele);
+        var elem = listDiv.appendChild(img);
+
+        // document.write(obj.thumbnailUrl);
       });
 
-      div = div + "</div>";
-      listDiv.innerHTML = div;
-    // listDiv.appendChild(div)
+    //   elem = elem + "</div>";
     },
     (err) => {
       console.log(err);
