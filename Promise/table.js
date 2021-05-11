@@ -24,8 +24,9 @@ btn.onclick = () => {
 
   data.then(
     (res) => {
-      var parseData = JSON.parse(res);
-      var strData = JSON.stringify(parseData);
+    //   var parseData = JSON.parse(res);
+
+    console.log(strData);
 
       var table =
         "<table><tr><th>User Id</th><th>Id</th><th>Title</th><th>Body</th></tr>";
