@@ -1,0 +1,12 @@
+.para {
+    border: 5px solid grey;
+    color: hotpink;
+    background-color: lawngreen;
+}
+
+.btn{
+    padding: 20px;
+    background-color: lawngreen;
+    border: 5px solid orange;
+    border-radius: 10px;
+}
