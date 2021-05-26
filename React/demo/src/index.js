@@ -2,20 +2,31 @@ import React from 'react';
 import ReactDOM from 'react-dom'
 import Bharat from './Component'
 import ButtonComponent from "./ButtonComponent"
+import FunctionalComp from './stateAndProps/funcComp'
+import ClassComponent from './stateAndProps/classComp'
 import "./index.css"
 
 function App() {
     return (
+      // <div>
+      //   <h2 style={{ backgroundColor: "red", color: "green" }}>Heading</h2>
+      //   <p className="para">Paragraph</p>
+      //   <Bharat />
+      //   <br />
+      //   <ButtonComponent title="Activate" />
+      //   <br />
+      //   <br />
+      //   <br />
+      //   <ButtonComponent title="Deactivate" />
+      // </div>
       <div>
-        <h2 style={{ backgroundColor: "red", color: "green" }}>Heading</h2>
-        <p className="para">Paragraph</p>
-        <Bharat />
-        <br />
-        <ButtonComponent title="Activate" />
-        <br />
-        <br />
-        <br />
-        <ButtonComponent title="Deactivate" />
+        <FunctionalComp name="Functionalll Componenetttt" />
+        <ClassComponent
+          value1="Classsss Componentttt 1"
+          value2="Classsss Componentttt 2"
+          value3="Classsss Componentttt 3"
+          value4="Classsss Componentttt 4"
+        />
       </div>
     );
     
