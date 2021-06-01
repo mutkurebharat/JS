@@ -8,6 +8,8 @@ class ClassComponent extends Component {
       name: "Bharat",
       addr: "ASDFG",
     };
+
+    // this.clickHandler = this.clickHandler.bind(this);
   }
 
   changeName = () => {
@@ -22,14 +24,26 @@ class ClassComponent extends Component {
 
     console.log("Normal Changed value = ", this.state);
   };
+  
+  clickHandler = () => {
+      this.setState({
+        name: "ABCDEFGH"
+      })
+  }
 
   render() {
-    alert("Something");
     return (
       <div id="heading" className="head">
         {/* <h1>{this.props.value}</h1> */}
         <h1>{this.state.name}</h1>
-        <button onClick={() => this.changeName()}>Chnage Name</button>
+        {/* <button onClick={() => this.changeName()}>Chnage Name</button> */}
+        {/* <button onClick={this.clickHandler.bind(this)}>Click Me Class Component</button> */}
+        {/* <button onClick={() => this.clickHandler()}>
+          Click Me Class Component
+        </button> */}
+        <button onClick={this.clickHandler}>
+          Click Me Class Component
+        </button>
       </div>
 
       //   React.createElement(
