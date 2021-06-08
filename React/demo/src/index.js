@@ -4,6 +4,10 @@ import Bharat from './Component'
 import ButtonComponent from "./ButtonComponent"
 import FunctionalComp from './stateAndProps/funcComp'
 import ClassComponent from './stateAndProps/classComp'
+import Parent from './methodAsProps/methodAsProps'
+import Condition from './Conditional_Rendering/ifElse'
+import Ternarry from './Conditional_Rendering/Ternary'
+import ShortCircuit from './Conditional_Rendering/shortCircuitOperator'
 import "./index.css"
 
 function App() {
@@ -20,13 +24,17 @@ function App() {
       //   <ButtonComponent title="Deactivate" />
       // </div>
       <div>
-        <FunctionalComp name="Functionalll Componenetttt" />
+        {/* <FunctionalComp name="Functionalll Componenetttt" />
         <ClassComponent
           value1="Classsss Componentttt 1"
           value2="Classsss Componentttt 2"
           value3="Classsss Componentttt 3"
           value4="Classsss Componentttt 4"
-        />
+        /> */}
+        {/* <Parent /> */}
+        {/* <Condition /> */}
+        {/* <Ternarry /> */}
+        <ShortCircuit />
       </div>
     );
     
