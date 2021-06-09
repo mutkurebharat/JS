@@ -8,6 +8,8 @@ import Parent from './methodAsProps/methodAsProps'
 import Condition from './Conditional_Rendering/ifElse'
 import Ternarry from './Conditional_Rendering/Ternary'
 import ShortCircuit from './Conditional_Rendering/shortCircuitOperator'
+import List from './List/List'
+import ListClass from './List/ListClass'
 import "./index.css"
 
 function App() {
@@ -34,7 +36,9 @@ function App() {
         {/* <Parent /> */}
         {/* <Condition /> */}
         {/* <Ternarry /> */}
-        <ShortCircuit />
+        {/* <ShortCircuit /> */}
+        <List />
+        {/* <ListClass /> */}
       </div>
     );
     
