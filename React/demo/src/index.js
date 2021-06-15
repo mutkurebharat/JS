@@ -10,6 +10,8 @@ import Ternarry from './Conditional_Rendering/Ternary'
 import ShortCircuit from './Conditional_Rendering/shortCircuitOperator'
 import List from './List/List'
 import ListClass from './List/ListClass'
+import Form from './FormInput/FormInput'
+import LifeCycleOne from './Lifecycle_Method/cycle'
 import "./index.css"
 
 function App() {
@@ -37,8 +39,10 @@ function App() {
         {/* <Condition /> */}
         {/* <Ternarry /> */}
         {/* <ShortCircuit /> */}
-        <List />
+        {/* <List /> */}
         {/* <ListClass /> */}
+        {/* <Form /> */}
+        <LifeCycleOne />
       </div>
     );
     

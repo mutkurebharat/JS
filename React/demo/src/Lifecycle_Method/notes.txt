@@ -1,0 +1,60 @@
+Class Component - Lifrecycle Method
+------------------------------------------------------------------------------------
+Mounting - While creating a component or gets in a DOM.(Component gets added in a DOM)
+
+1. constructor - It is a special function thats gets called at first when new component gets created.
+
+* Initialize State 
+* Binding the Event Handlers
+
+# Never write API call in the constructor
+
+2. static getDerivedStateFromProps - When th state of your component depends on the 
+changes over props
+
+* to set the state
+
+# Never write API call in the static getDerivedStateFromProps
+
+
+3. render - Required Method. It return JSX.
+# Never write API call in the render 
+
+
+
+4. componentDidMount - Called Immediately once your component gets rendered.
+This Method will gets called only for first time.
+
+# It is the right place to write your API call here.
+
+------------------------------------------------------------------------------------
+
+
+
+Updating - When your component get re-rendered while changing the states
+
+1.static getDerivedStateFromProps(props, state) - Method gets called when your component gets rerendered.
+
+* set the state
+# Dont make thr API call here. 
+
+
+2. shouldComponentUpdate - Decides if your component should re-render or not.
+
+* Use for performance Optimization.
+3. render
+4. getSnapshotBeforeUpdate(prevProps, prevState)
+5.componentDidUpdate(prevProps, prevState, snapshot)
+
+------------------------------------------------------------------------------------
+
+Unmounting - When your component gets removed from the DOM.
+1. componentWillUnmount
+------------------------------------------------------------------------------------
+
+
+Error Handling - When Error Occurs while renderring the component.
+1. ststic getDerivedStateFromError 
+2. componentDidCatch
+
+------------------------------------------------------------------------------------
