@@ -12,6 +12,8 @@ import List from './List/List'
 import ListClass from './List/ListClass'
 import Form from './FormInput/FormInput'
 import LifeCycleOne from './Lifecycle_Method/cycle'
+import Fragment from './Fragement/fragement'
+import ParentComponent from './Pure_Component/ParentComponent'
 import "./index.css"
 
 function App() {
@@ -27,7 +29,7 @@ function App() {
       //   <br />
       //   <ButtonComponent title="Deactivate" />
       // </div>
-      <div>
+      <React.Fragment>
         {/* <FunctionalComp name="Functionalll Componenetttt" />
         <ClassComponent
           value1="Classsss Componentttt 1"
@@ -42,8 +44,10 @@ function App() {
         {/* <List /> */}
         {/* <ListClass /> */}
         {/* <Form /> */}
-        <LifeCycleOne />
-      </div>
+        {/* <LifeCycleOne /> */}
+        {/* <Fragment /> */}
+        <ParentComponent />
+      </React.Fragment>
     );
     
 }
