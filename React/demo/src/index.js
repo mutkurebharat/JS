@@ -14,6 +14,8 @@ import Form from './FormInput/FormInput'
 import LifeCycleOne from './Lifecycle_Method/cycle'
 import Fragment from './Fragement/fragement'
 import ParentComponent from './Pure_Component/ParentComponent'
+import Ref from './Ref/Ref'
+import InputContComp from './Ref/InputContComp'
 import "./index.css"
 
 function App() {
@@ -46,7 +48,9 @@ function App() {
         {/* <Form /> */}
         {/* <LifeCycleOne /> */}
         {/* <Fragment /> */}
-        <ParentComponent />
+        {/* <ParentComponent /> */}
+        {/* <Ref /> */}
+        <InputContComp />
       </React.Fragment>
     );
     

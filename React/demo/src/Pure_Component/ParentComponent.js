@@ -1,6 +1,7 @@
 import { Component } from "react";
 import PureComponnet from "./PureComponent";
 import RegularComponent from "./RegularComponnet";
+import Memo from './Memo'
 
 class ParentComponent extends Component {
     constructor() {
@@ -21,12 +22,13 @@ class ParentComponent extends Component {
 
     render() {
         console.log("Render -------- Parent Component")
-        return(
-            <>
-                <PureComponnet />
-                <RegularComponent />
-            </>
-        )
+        return (
+          <>
+            {/* <PureComponnet /> */}
+            <RegularComponent />
+            <Memo />
+          </>
+        );
     }
 }
 
