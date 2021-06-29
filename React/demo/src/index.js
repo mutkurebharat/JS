@@ -16,6 +16,8 @@ import Fragment from './Fragement/fragement'
 import ParentComponent from './Pure_Component/ParentComponent'
 import Ref from './Ref/Ref'
 import InputContComp from './Ref/InputContComp'
+import ClickCount from './HOC/ClickCount'
+import HoverCount from './HOC/HoverCounter'
 import "./index.css"
 
 function App() {
@@ -50,7 +52,9 @@ function App() {
         {/* <Fragment /> */}
         {/* <ParentComponent /> */}
         {/* <Ref /> */}
-        <InputContComp />
+        {/* <InputContComp /> */}
+        <ClickCount some="ABC" one="1" two="2" three="3" />
+        <HoverCount />
       </React.Fragment>
     );
     
