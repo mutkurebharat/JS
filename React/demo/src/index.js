@@ -18,6 +18,15 @@ import Ref from './Ref/Ref'
 import InputContComp from './Ref/InputContComp'
 import ClickCount from './HOC/ClickCount'
 import HoverCount from './HOC/HoverCounter'
+import ClickCounter from './PropsRendering/ClickCounter';
+import HoverCounter from "./PropsRendering/HoverCounter";
+import CommonComponent from './PropsRendering/CommonComponent'
+import Name from './PropsRendering/Name'
+import ComponentA from './Context/NormalUseCase/ComponentA'
+import ComponentB from "./Context/NormalUseCase/ComponentB";
+import ComponentC from "./Context/NormalUseCase/ComponentC";
+
+
 import "./index.css"
 
 function App() {
@@ -53,8 +62,25 @@ function App() {
         {/* <ParentComponent /> */}
         {/* <Ref /> */}
         {/* <InputContComp /> */}
-        <ClickCount some="ABC" one="1" two="2" three="3" />
-        <HoverCount />
+        {/* <ClickCount some="ABC" one="1" two="2" three="3" />
+        <HoverCount /> */}
+        {/* <ClickCounter />
+        <HoverCounter /> */}
+        {/* <CommonComponent
+          abc={(count, incrementCount) => (
+            <ClickCounter count={count} incrementCount={incrementCount} />
+          )}
+        />
+
+        <CommonComponent
+          abc={(count, incrementCount) => (
+            <HoverCounter count={count} incrementCount={incrementCount} />
+          )}
+        />
+
+        <Name value={(something) => something === "one" ? "Hundred" : "Invalid"} /> */}
+
+        <ComponentA name="Bharat"/>
       </React.Fragment>
     );
     
