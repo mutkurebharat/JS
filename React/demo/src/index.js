@@ -25,6 +25,9 @@ import Name from './PropsRendering/Name'
 import ComponentA from './Context/NormalUseCase/ComponentA'
 import ComponentB from "./Context/NormalUseCase/ComponentB";
 import ComponentC from "./Context/NormalUseCase/ComponentC";
+import ContextComponentA from './Context/ContextAPI/ContextComponentA';
+import { ContextApiProvider } from './Context/ContextAPI/Context';
+import {obj} from './Context/ContextAPI/data'
 
 
 import "./index.css"
@@ -80,7 +83,10 @@ function App() {
 
         <Name value={(something) => something === "one" ? "Hundred" : "Invalid"} /> */}
 
-        <ComponentA name="Bharat"/>
+        {/* <ComponentA name="Bharat"/> */}
+        <ContextApiProvider value={obj}>
+          <ContextComponentA />
+        </ContextApiProvider>
       </React.Fragment>
     );
     
