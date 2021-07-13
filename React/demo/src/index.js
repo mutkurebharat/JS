@@ -28,6 +28,8 @@ import ComponentC from "./Context/NormalUseCase/ComponentC";
 import ContextComponentA from './Context/ContextAPI/ContextComponentA';
 import { ContextApiProvider } from './Context/ContextAPI/Context';
 import {obj} from './Context/ContextAPI/data'
+import PostsApi from './Api/postsApi';
+import MethodPostApi from './Api/MethodPostApi';
 
 
 import "./index.css"
@@ -84,9 +86,12 @@ function App() {
         <Name value={(something) => something === "one" ? "Hundred" : "Invalid"} /> */}
 
         {/* <ComponentA name="Bharat"/> */}
-        <ContextApiProvider value={obj}>
+        {/* <ContextApiProvider value={obj}>
           <ContextComponentA />
-        </ContextApiProvider>
+        </ContextApiProvider> */}
+
+        {/* <PostsApi /> */}
+        <MethodPostApi />
       </React.Fragment>
     );
     
