@@ -30,6 +30,10 @@ import { ContextApiProvider } from './Context/ContextAPI/Context';
 import {obj} from './Context/ContextAPI/data'
 import PostsApi from './Api/postsApi';
 import MethodPostApi from './Api/MethodPostApi';
+import ClassCounter from './Hooks/Components/ClassCounter';
+import HookCounter from './Hooks/Components/HookCounter';
+import UseStateWithObject from './Hooks/Components/UseStateWithObject';
+import UseStateWithArray from './Hooks/Components/UseStateWithArray';
 
 
 import "./index.css"
@@ -91,7 +95,12 @@ function App() {
         </ContextApiProvider> */}
 
         {/* <PostsApi /> */}
-        <MethodPostApi />
+        {/* <MethodPostApi /> */}
+        {/* <ClassCounter /> */}
+        {/* <HookCounter /> */}
+        {/* <UseStateWithObject /> */}
+        <UseStateWithArray />
+        
       </React.Fragment>
     );
     
