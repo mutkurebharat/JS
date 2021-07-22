@@ -34,6 +34,8 @@ import ClassCounter from './Hooks/Components/ClassCounter';
 import HookCounter from './Hooks/Components/HookCounter';
 import UseStateWithObject from './Hooks/Components/UseStateWithObject';
 import UseStateWithArray from './Hooks/Components/UseStateWithArray';
+import HooksClassCounter from './Hooks/UseEffect/ClassCounter'
+import UseEffectHookCounter from './Hooks/UseEffect/UseEffectHookCounter'
 
 
 import "./index.css"
@@ -99,8 +101,9 @@ function App() {
         {/* <ClassCounter /> */}
         {/* <HookCounter /> */}
         {/* <UseStateWithObject /> */}
-        <UseStateWithArray />
-        
+        {/* <UseStateWithArray /> */}
+        {/* <HooksClassCounter /> */}
+        <UseEffectHookCounter />
       </React.Fragment>
     );
     
